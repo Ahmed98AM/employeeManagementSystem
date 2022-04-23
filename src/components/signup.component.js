@@ -58,12 +58,6 @@ export default class CreateEmployee extends Component {
     } catch (err) {
       alert((err.response && err.response.data.message) || err);
     }
-    this.setState({
-      name: "",
-      email: "",
-      password: "",
-      passwordConfirm: "",
-    });
   }
 
   render() {

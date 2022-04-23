@@ -3,16 +3,12 @@ import { Link } from "react-router-dom";
 import axios from "axios";
 
 export default class Navbar extends Component {
-  // constructor(props) {
-  //   super(props);
-
-  //   this.logoutFunc = this.logoutFunc.bind(this);
-  // }
   async logOutFunc() {
     try {
       await axios({
         method: "GET",
         url: "http://localhost:5000/api/users/logout",
+        withCredentials: true,
       });
       window.location = "/login";
     } catch (err) {

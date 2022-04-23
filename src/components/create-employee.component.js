@@ -52,7 +52,7 @@ export default class CreateEmployee extends Component {
         data,
         withCredentials: true,
       });
-      // window.location = "/";
+      window.location = "/";
     } catch (err) {
       alert(err.response.data.message);
     }
