@@ -64,7 +64,10 @@ export default class EditEmployee extends Component {
     const data = {
       name: this.state.name,
       attended: this.state.attended,
-      attendDate: this.state.attended === "true" ? this.state.attendDate : null,
+      attendDate:
+        JSON.stringify(this.state.attended) === "true"
+          ? this.state.attendDate
+          : null,
     };
     try {
       await axios({
